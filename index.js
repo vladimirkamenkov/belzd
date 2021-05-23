@@ -56,5 +56,7 @@ cron.schedule('* * * * *', function() {
                 }
             });
         }
-    });    
+    });
+    
+    console.log('all urls cheked');
 });
