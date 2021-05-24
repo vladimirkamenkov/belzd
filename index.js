@@ -5,6 +5,8 @@ const nodemailer = require('nodemailer');
 
 const pass = process.env.YANDEX;
 
+const sendedUrls = [];
+
 const transporter = nodemailer.createTransport({
     host: 'smtp.yandex.ru',
     port: 465,
@@ -45,14 +47,15 @@ cron.schedule('* * * * *', function() {
         const $ = cheerio.load(html);
         const elems = $('.sch-table__row[data-train-number="722Б"] .cell-4.empty, .sch-table__row[data-train-number="718Б"] .cell-4.empty');
     
-        if (elems.length < 2) {
+        if (elems.length < 2 && !sendedUrls.includes(url)) {
             mailOptions.text = `URL: ${url}`;
     
             transporter.sendMail(mailOptions, (error, info) => {
                 if (error) {
                   console.log(error);
                 } else {
-                  console.log('Email sent: ' + info.response);
+                    sendedUrls.push(url);
+                    console.log('Email sent: ' + info.response);
                 }
             });
         }
