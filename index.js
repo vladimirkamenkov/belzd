@@ -5,6 +5,8 @@ const nodemailer = require('nodemailer');
 
 const pass = process.env.YANDEX;
 
+console.log(pass, 'pass');
+
 const sendedUrls = [];
 
 const transporter = nodemailer.createTransport({
