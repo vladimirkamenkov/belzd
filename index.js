@@ -1,11 +1,8 @@
-const cron = require('node-cron');
 const axios = require('axios');
 const cheerio = require('cheerio');
 const nodemailer = require('nodemailer');
 
 const pass = process.env.YANDEX;
-
-console.log(pass, 'pass');
 
 const sendedUrls = [];
 
@@ -45,8 +42,7 @@ const urls = [
     'https://ibe.belavia.by/select?journeyType=Ow&journey=MSQBUS20220328&adults=1&children=0&infants=0&lang=ru'
 ];
 
-cron.schedule('* * * * *', function () {
-    urls.forEach(async url => {
+urls.forEach(async url => {
         const html = await getHTMLUrl(url);
         const $ = cheerio.load(html);
         const elems = $('.offer-item');
@@ -65,5 +61,4 @@ cron.schedule('* * * * *', function () {
         }
     });
 
-    console.log('all urls cheked');
-});
+console.log('all urls cheked');
