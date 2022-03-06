@@ -3,6 +3,8 @@ const cheerio = require('cheerio');
 const nodemailer = require('nodemailer');
 const puppeteer = require('puppeteer');
 
+process.setMaxListeners(Infinity);
+
 const pass = process.env.YANDEX;
 
 const sendedUrls = [];
