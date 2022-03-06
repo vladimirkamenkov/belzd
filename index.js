@@ -39,7 +39,17 @@ const urls = [
     'https://ibe.belavia.by/select?journeyType=Ow&journey=MSQBUS20220325&adults=1&children=0&infants=0&lang=ru',
     'https://ibe.belavia.by/select?journeyType=Ow&journey=MSQBUS20220326&adults=1&children=0&infants=0&lang=ru',
     'https://ibe.belavia.by/select?journeyType=Ow&journey=MSQBUS20220327&adults=1&children=0&infants=0&lang=ru',
-    'https://ibe.belavia.by/select?journeyType=Ow&journey=MSQBUS20220328&adults=1&children=0&infants=0&lang=ru'
+    'https://ibe.belavia.by/select?journeyType=Ow&journey=MSQBUS20220328&adults=1&children=0&infants=0&lang=ru',
+    'https://ibe.belavia.by/select?journeyType=Ow&journey=MSQKUT20220319&adults=1&children=0&infants=0&lang=ru',
+    'https://ibe.belavia.by/select?journeyType=Ow&journey=MSQKUT20220320&adults=1&children=0&infants=0&lang=ru',
+    'https://ibe.belavia.by/select?journeyType=Ow&journey=MSQKUT20220321&adults=1&children=0&infants=0&lang=ru',
+    'https://ibe.belavia.by/select?journeyType=Ow&journey=MSQKUT20220322&adults=1&children=0&infants=0&lang=ru',
+    'https://ibe.belavia.by/select?journeyType=Ow&journey=MSQKUT20220323&adults=1&children=0&infants=0&lang=ru',
+    'https://ibe.belavia.by/select?journeyType=Ow&journey=MSQKUT20220324&adults=1&children=0&infants=0&lang=ru',
+    'https://ibe.belavia.by/select?journeyType=Ow&journey=MSQKUT20220325&adults=1&children=0&infants=0&lang=ru',
+    'https://ibe.belavia.by/select?journeyType=Ow&journey=MSQKUT20220326&adults=1&children=0&infants=0&lang=ru',
+    'https://ibe.belavia.by/select?journeyType=Ow&journey=MSQKUT20220327&adults=1&children=0&infants=0&lang=ru',
+    'https://ibe.belavia.by/select?journeyType=Ow&journey=MSQKUT20220328&adults=1&children=0&infants=0&lang=ru'
 ];
 
 urls.forEach(async url => {
